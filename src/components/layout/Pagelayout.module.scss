@@ -1,0 +1,22 @@
+// Estilos para Layout.module.scss
+
+/* Estilos para el contenedor principal del layout */
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fcfaf9;
+    
+
+}
+
+.main {
+    flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+    
+  }
+
+  .footer {
+    padding: 1rem;
+    margin-top: auto; /* Empuja el pie de página hacia la parte inferior de la pantalla */
+    
+  }

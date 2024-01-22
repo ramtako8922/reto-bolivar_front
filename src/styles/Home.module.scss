@@ -1,0 +1,65 @@
+.main{
+  background-color: #fcfaf9;
+  
+  width: 100%;
+  margin:0px;
+min-height:100vh;
+  .secctionTitle{
+      display: flex;
+      justify-content: center;
+      margin-top: 2%;
+  .containerTitle{
+      width: 40%;
+      background-color: #343a40;
+      border-radius: 8PX;
+      display: flex;
+      justify-content: center;
+  .title{
+      color: white;
+      font-size: 2em;
+      text-align: center;
+      
+
+  
+  }    
+}
+
+  }
+  .secctionArticle{
+      display: flex;
+      justify-content: center;
+      margin-top: 2%;
+      width:100%;
+  .containerArticle{
+      background-color: #fff;
+      width: 50%;
+      height: 100%;
+      border-radius: 10px;
+      font-size: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 50px;
+      box-shadow: 2px 4px 4px #6c757d ;
+      .articleContent{
+          width: 90%;
+          padding: 2%;
+          text-align: center;
+      }
+
+      .image{
+          width: 450px;
+          margin: 0 auto;
+      }
+  }
+}
+.secctionInstructions{
+  width: 100%;
+  height: auto;
+  background-color: #28a745;
+  color: #fff;
+  margin-top: 2%;
+}
+
+
+}

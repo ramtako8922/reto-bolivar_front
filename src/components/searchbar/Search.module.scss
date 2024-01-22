@@ -1,0 +1,37 @@
+.container{
+    width: 95%;
+    background-color: #28a745;
+    margin-top: 2%;
+    height: 10%;
+    padding: 1%;
+    
+    border-radius: 10px;
+    form{
+       
+   display: flex;
+        width: 80%;
+        justify-content: space-around;
+        align-items: center;
+        .containerInput{
+            width: 80%;
+
+        .inputSong{
+            padding: 1%;
+            width: 100%;
+            height: 40px;
+            font-size: 1.1em;
+            border-radius: 10px;
+        }
+    } .containerButton{
+        width: 5%;
+        button{
+            background-color: #f6f6f6;
+            font-weight: 300;
+            font-size: 1.8em;
+            width: 350px;
+            height: 60px;
+            border-radius: 20px;
+        }
+    }
+}
+}

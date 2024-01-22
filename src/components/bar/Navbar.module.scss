@@ -1,0 +1,20 @@
+.navbar{
+    width: 100%;
+    background-color: #ffff;
+    height: 7em;
+    border-top:4px solid #28a745;
+    ul{
+        list-style: none;
+        font-family: Roboto,sans-serif;
+        font-size: 1.4em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        li{
+            margin-left: 20px;
+        }
+
+    }
+}

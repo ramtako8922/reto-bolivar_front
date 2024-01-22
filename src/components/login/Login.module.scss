@@ -1,0 +1,53 @@
+// components/LoginForm.module.scss
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+form {
+    height: 260px;
+    width: 60%;
+    margin-top: 8%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+    div {
+      margin-bottom: 15px;
+  
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+  
+      input {
+        width: 100%;
+        padding: 8px;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        height: 40px;
+        box-sizing: border-box;
+        font-size: 18px;
+      }
+    }
+  
+    button {
+      background-color: #28a745;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+  
+      &:hover {
+        background-color: #343a40;
+      }
+    }
+  }
+}
