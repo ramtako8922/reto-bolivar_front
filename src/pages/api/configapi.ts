@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { getAuth } from '@/redux/selectores';
 
  export const CLIEN_TID = ""; //Client id de spotify
- export const REDIRECT_URI = "http://localhost:3000/"; // url cofigurada en la app de la API de Spotify
+ export const REDIRECT_URI = ""; // url cofigurada en la app de la API de Spotify
  export const SCOPE = "user-read-private user-read-email";
  
 	  //Funcion que genera un estado aleatorio apartir de la cadena 
@@ -19,6 +19,7 @@ import { getAuth } from '@/redux/selectores';
 
   return result;
 };
+
  const STATE=generateRandomString(16)
 
 export const spotifyAuthorizedUrl = `https://accounts.spotify.com/authorize?response_type=token&client_id=${CLIEN_TID}&SCOPE=${SCOPE}&redirect_uri=${REDIRECT_URI}&state=${STATE}`;
@@ -35,14 +36,10 @@ const accessToken =useSelector(getAuth)
   }
 };
   
-   
 
   return{
      options,
     accessToken
-
-  // Resto de tu lógica aquí
-
 
 };
 
