@@ -14,7 +14,7 @@ const inter = Roboto({
 
 interface NoResultsPageProps {
 }
-
+// Aca se renderiza la página cuando el usuario no se ha logueado ni autenticado y por ende no ve resultados de su busqueda
 const Noresultspage: React.FunctionComponent<NoResultsPageProps> = (props) => {
   return (
     <PrivateRoute>

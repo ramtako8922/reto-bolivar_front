@@ -19,11 +19,12 @@ const inter = Roboto({
     weight: "300"
   });
 
-
+// Intefaz por si se requiere tipear el componente
 interface ResultsPageProps {
 
 }
   
+// esta pagina renderiza lo resulrados cuando el usuario esta autenticado
 
 const Resultspage: React.FunctionComponent<ResultsPageProps> = (props) => {
   const dispatch = useDispatch();

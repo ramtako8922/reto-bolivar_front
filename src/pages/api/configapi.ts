@@ -3,11 +3,11 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { getAuth } from '@/redux/selectores';
 
- export const CLIEN_TID = "56257c2a3cfd4fa3ba58ad66d7e17dc6";
- export const REDIRECT_URI = "http://localhost:3000/";
+ export const CLIEN_TID = ""; //Client id de spotify
+ export const REDIRECT_URI = "http://localhost:3000/"; // url cofigurada en la app de la API de Spotify
  export const SCOPE = "user-read-private user-read-email";
  
-	   
+	  //Funcion que genera un estado aleatorio apartir de la cadena 
  const generateRandomString = (length: number) => {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';

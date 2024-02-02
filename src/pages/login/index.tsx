@@ -11,10 +11,11 @@ const inter = Roboto({
     weight: "300"
   });
 
+  //Interfaz por si se requiere tipiar la funcion
 
 interface LoginProps {
 }
-
+ // esta pagina renderiza los componentes de la sesión de login
 const LoginPage: React.FunctionComponent<LoginProps> = (props) => {
   return (
     
