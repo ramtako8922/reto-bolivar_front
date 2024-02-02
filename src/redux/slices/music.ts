@@ -1,6 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import apiCall from "../../pages/api/index";
-import { options } from "../../pages/api/configapi";
+import { useConfig } from "../../pages/api/configapi";
+import { useSelector } from "react-redux";
+import { getAuth } from "../selectores";
  
 
 export interface FetchMusicPayload {
@@ -14,6 +16,7 @@ export interface FetchMusicPayload {
   error: any; // Ajusta el tipo según la estructura real de tus errores
   
 }
+
 
 const initialState: MusicState = {
   isLoading: false,
@@ -40,12 +43,14 @@ const musicSlice = createSlice({
 });
 
 
-export const fetchMusic = (word: string) => async (dispatch: any) => {
+export const fetchMusic = (word: string, options:any) => async (dispatch: any) => {
   try {
     dispatch(fetchMusicLoading());
-
-    const result = await apiCall({ url: `/search/?q=${word}&type=album,track,artist&offset=0&limit=10&numberOfTopResults=5`,options });
-
+    
+    
+    
+    const result = await apiCall({ url: `/search/?q=${word}&type=album,track,artist&offset=0&limit=10&numberOfTopResults=5`, options});
+    
     
     dispatch(fetchMusicSuccess(result.tracks.items));
     

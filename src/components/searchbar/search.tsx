@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getSearchTerm } from '../../redux/selectores';
 import { setSearchTerm } from '../../redux/slices/search'
-import styles from '@/components/searchbar/Search.module.scss'
+import styles from '../searchbar/Search.module.scss'
 
 const SearchBar: React.FC = () => {
   const dispatch = useDispatch();

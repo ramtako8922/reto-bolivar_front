@@ -5,6 +5,11 @@ import styles from "@/styles/Home.module.scss";
 import Pagelayout from "@/components/layout/pagelayout";
 import logo from '../../public/logo-constructora-bolivar.svg'
 import Cardinstruction from "@/components/instruction/cardinstruction";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import {setIsAuthenticated } from "@/redux/slices/auth";
+
+
 
 const inter = Roboto({
   subsets: ["latin"],
@@ -12,6 +17,42 @@ const inter = Roboto({
 });
 
 export default function Home() {
+
+  const [accessToken, setAccessToken] = useState("");
+  const dispatch=useDispatch()
+  
+  
+  const getReturnedParamsFromSpotifyAuth = (hash) => {
+    const stringAfterHashtag = hash.substring(1);
+    const paramsInUrl = stringAfterHashtag.split("&");
+    
+    const paramsSplitUp = paramsInUrl.reduce((accumulater: { [x: string]: any; }, currentValue: { split: (arg0: string) => [any, any]; }) => {
+
+      const [key, value] = currentValue.split("=");
+      accumulater[key] = value;
+       return accumulater;
+      }, {});
+    
+      return paramsSplitUp;
+      
+    }; 
+    
+   
+  useEffect(() => {
+  
+      if (window.location.hash) {
+        const { access_token, expires_in, token_type } =
+          getReturnedParamsFromSpotifyAuth(window.location.hash);
+            setAccessToken(access_token)
+             const setAuth=dispatch(setIsAuthenticated(accessToken))
+           
+  
+
+    };
+  
+  
+  });
+
   return (
     <>
       <Pagelayout>

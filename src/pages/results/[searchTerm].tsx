@@ -9,7 +9,8 @@ import Card from '@/components/cardSong/songcard';
 import {  useDispatch, useSelector } from 'react-redux';
 import {getMusicLoading,getMusicError,getMusic,getSearchTerm} from '@/redux/selectores'
 import { fetchMusic,FetchMusicPayload } from '@/redux/slices/music';
-import { useLocation } from 'react-router-dom';
+import { useConfig } from '../api/configapi';
+import PrivateRoute from '@/components/routes/PrivateRoute';
 
 
 
@@ -29,6 +30,7 @@ const Resultspage: React.FunctionComponent<ResultsPageProps> = (props) => {
   const infoLoading = useSelector(getMusicLoading);
   const infoError = useSelector(getMusicError);
   const info = useSelector(getMusic);
+  const{options}=useConfig()
 
 
 
@@ -36,11 +38,12 @@ const Resultspage: React.FunctionComponent<ResultsPageProps> = (props) => {
   
 
   React.useEffect(() => {
-    dispatch(fetchMusic(searchTerm))
+    dispatch(fetchMusic(searchTerm,options))
     
   }, [searchTerm]); // Asegúrate de incluir searchTerm como dependencia
 
   return (
+    <PrivateRoute>
     <>
       <Pagelayout>
         <Head>
@@ -59,6 +62,7 @@ const Resultspage: React.FunctionComponent<ResultsPageProps> = (props) => {
         </main>
       </Pagelayout>
     </>
+    </PrivateRoute>
   );
 };
 
